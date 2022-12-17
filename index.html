@@ -64,7 +64,9 @@
             <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button class="box-service" type="button">Zamów usługę</button>
+          <button class="box-service" type="button" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
       </section>
       <section class="section">
@@ -145,29 +147,38 @@
         </div>
         <div class="container">
           <ul class="flex-box hero-gap">
-            <li>
+            <li class="about-tile">
               <img
                 src="images/about_us/box1.jpg"
                 alt="Programista pracuje nad kodem"
                 width="370"
                 height="294"
               />
+              <div class="about-caption">
+                <p>aplikacje komputerowe</p>
+              </div>
             </li>
-            <li>
+            <li class="about-tile">
               <img
                 src="images/about_us/box2.jpg"
                 alt="Web developer pracuje nad projektem"
                 width="370"
                 height="294"
               />
+              <div class="about-caption">
+                <p>aplikacje mobilne</p>
+              </div>
             </li>
-            <li>
+            <li class="about-tile">
               <img
                 src="images/about_us/box3.jpg"
                 alt="Projektant strony dobiera kolory z palety"
                 width="370"
                 height="294"
               />
+              <div class="about-caption">
+                <p>rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -429,5 +440,11 @@
         </div>
       </footer>
     </main>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>

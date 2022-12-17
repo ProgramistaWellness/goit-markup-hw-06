@@ -13,6 +13,7 @@
   --bottom-border-portfolio: #eee;
   --icon-clients-color: #afb1b8;
   --icon-clients-hover: #2196f3;
+  --about-caption-bg: #2f303acc;
 }
 
 body {
@@ -188,6 +189,29 @@ header a:focus {
   height: 120px;
   padding: 25px 100px;
   margin-bottom: 30px;
+}
+
+/* about section styling */
+
+.about-tile {
+  position: relative;
+}
+
+.about-caption {
+  width: 370px;
+  min-height: 70px;
+  background-color: var(--about-caption-bg);
+  position: absolute;
+  top: 224px;
+}
+
+.about-caption p {
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--brand-colorAccent);
+  transform: translateY(200%);
 }
 
 /* team section styling */
@@ -412,4 +436,45 @@ header a:focus {
 }
 .portfolio-img {
   display: block;
+}
+
+/* modal style styling */
+
+.modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--brand-colorAccent);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--brand-colorAccent);
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
