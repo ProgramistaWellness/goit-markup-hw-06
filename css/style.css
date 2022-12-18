@@ -1,6 +1,6 @@
 :root {
   --brand-background1: #2f303a;
-  --brand-background2: #2f303a66;
+  --header-background: #2f303a66;
   --brand-color1: #2196f3;
   --brand-color2: #000000;
   --brand-colorAccent: #ffffff;
@@ -134,12 +134,13 @@ header a:focus {
 .header-image {
   background-image: linear-gradient(
       to bottom,
-      var(--brand-background1),
-      var(--brand-background2)
+      var(--header-background),
+      var(--header-background)
     ),
     url(../images/header_image.jpg);
   max-width: 1600px;
   background-size: cover;
+  margin: 0 auto;
 }
 .box-service {
   font-weight: 700;
@@ -159,6 +160,7 @@ header a:focus {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin: 0 auto;
 }
 
 .negative-margin {
@@ -273,6 +275,7 @@ header a:focus {
   height: 44px;
   padding: 12px;
   color: var(--icon-clients-color);
+  cursor: pointer;
 }
 
 .social-icons-list:hover,
@@ -288,6 +291,7 @@ header a:focus {
   padding: 12px;
   background-color: var(--brand-colorAccent-op);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .social-icon-footer:hover,
@@ -306,6 +310,7 @@ header a:focus {
   height: 92px;
   justify-content: center;
   color: var(--icon-clients-color);
+  cursor: pointer;
 }
 
 .box-icon {
