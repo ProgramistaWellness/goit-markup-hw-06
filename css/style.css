@@ -360,6 +360,7 @@ header a:focus {
 .social-footer {
   padding: 72px 0px;
   color: var(--brand-colorAccent);
+  margin-right: 70px;
 }
 
 .social-footer p {
@@ -403,6 +404,46 @@ header a:focus {
 .link-footer:hover,
 .link-footer:focus {
   color: var(--brand-color1);
+}
+
+.form-footer {
+  padding: 72px 0px;
+  color: var(--brand-colorAccent);
+  display: flex;
+  flex-direction: row;
+  width: 580px;
+}
+
+.label-footer {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--brand-colorAccent);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-footer {
+  padding: 8px;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.btn-footer-wrapper {
+}
+
+.btn-footer {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: inherit;
+  cursor: pointer;
 }
 
 /* portfolio styling */
