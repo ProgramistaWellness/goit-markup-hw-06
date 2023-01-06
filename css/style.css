@@ -6,8 +6,10 @@
   --brand-colorAccent: #ffffff;
   --brand-colorAccent-op: #ffffff1a;
   --menu-color: #212121;
+  --input-modal-border: #21212133;
   --button-background: #f5f4fa;
   --paragraph-color: #757575;
+  --placeholder-color: #75757580;
   --link-footercolor: #ffffff99;
   --bottom-border-header: #e5e5e5;
   --bottom-border-portfolio: #eee;
@@ -610,6 +612,12 @@ header a:focus {
 .modal-input {
   width: 100%;
   padding: 12px 0px 12px 42px;
+  border: 1px solid var(--input-modal-border);
+  font-size: 16px;
+}
+
+.modal-input:focus {
+  border: 1px solid var(--brand-color1);
 }
 
 .modal-input-icon {
@@ -623,6 +631,25 @@ header a:focus {
   width: 100%;
   padding: 12px 0px 12px 16px;
   resize: none;
+}
+
+.modal-textarea::placeholder {
+  color: var(--placeholder-color);
+  font-size: 12px;
+}
+
+.modal label {
+  color: var(--paragraph-color);
+  font-size: 12px;
+}
+
+.agree-label {
+  line-height: 1.7;
+  color: var(--paragraph-color);
+}
+
+.agree-label a {
+  color: var(--brand-color1);
 }
 
 .is-hidden {
