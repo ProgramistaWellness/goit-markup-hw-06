@@ -605,8 +605,16 @@ header a:focus {
     1px 2px 4px rgba(0, 0, 0, 0.16);
 }
 
+.form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--menu-color);
+  text-align: center;
+}
+
 .modal-input-wrapper {
   position: relative;
+  margin-top: 4px;
 }
 
 .modal-input {
@@ -614,10 +622,13 @@ header a:focus {
   padding: 12px 0px 12px 42px;
   border: 1px solid var(--input-modal-border);
   font-size: 16px;
+  outline: none;
 }
 
-.modal-input:focus {
+.modal-input:focus,
+.modal-textarea:focus {
   border: 1px solid var(--brand-color1);
+  color: var(--brand-color1);
 }
 
 .modal-input-icon {
@@ -625,11 +636,14 @@ header a:focus {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  fill: currentColor;
 }
 
 .modal-textarea {
   width: 100%;
   padding: 12px 0px 12px 16px;
+  border: 1px solid var(--input-modal-border);
+  outline: none;
   resize: none;
 }
 
@@ -641,15 +655,32 @@ header a:focus {
 .modal label {
   color: var(--paragraph-color);
   font-size: 12px;
+  margin-top: 10px;
 }
 
 .agree-label {
   line-height: 1.7;
   color: var(--paragraph-color);
+  margin-top: 20px;
 }
 
 .agree-label a {
   color: var(--brand-color1);
+}
+
+.modal-form-btn {
+  font-weight: 700;
+  background-color: var(--brand-color1);
+  color: var(--brand-colorAccent);
+  border-radius: 4px;
+  max-width: 200px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 2;
+  padding: 10px 41px;
+  text-align: center;
+  border: none;
+  margin-top: 30px;
 }
 
 .is-hidden {
