@@ -598,11 +598,16 @@ header a:focus {
   position: relative;
   width: 528px;
   min-height: 581px;
-  padding: 40px;
+  padding: 45px 40px 35px;
   border-radius: 4px;
   background-color: var(--brand-colorAccent);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.06),
     1px 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.modal-form {
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .form-title {
@@ -610,11 +615,21 @@ header a:focus {
   font-weight: 700;
   color: var(--menu-color);
   text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal-label {
+  position: relative;
+  font-size: 12px;
+  color: var(--paragraph-color);
 }
 
 .modal-input-wrapper {
   position: relative;
-  margin-top: 4px;
+}
+
+.modal-input-wrapper:focus-within {
+  fill: var(--brand-color1);
 }
 
 .modal-input {
@@ -622,40 +637,36 @@ header a:focus {
   padding: 12px 0px 12px 42px;
   border: 1px solid var(--input-modal-border);
   font-size: 16px;
+  line-height: 1;
   outline: none;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .modal-input:focus,
 .modal-textarea:focus {
   border: 1px solid var(--brand-color1);
-  color: var(--brand-color1);
 }
 
 .modal-input-icon {
   position: absolute;
-  top: 50%;
+  top: 24px;
   left: 12px;
-  transform: translateY(-50%);
-  fill: currentColor;
+  transform: translateY(50%);
 }
 
 .modal-textarea {
-  width: 100%;
   padding: 12px 0px 12px 16px;
   border: 1px solid var(--input-modal-border);
   outline: none;
   resize: none;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .modal-textarea::placeholder {
   color: var(--placeholder-color);
   font-size: 12px;
-}
-
-.modal label {
-  color: var(--paragraph-color);
-  font-size: 12px;
-  margin-top: 10px;
 }
 
 .agree-label {
@@ -668,19 +679,58 @@ header a:focus {
   color: var(--brand-color1);
 }
 
+.modal-checkbox {
+  position: relative;
+  align-self: center;
+  margin-top: 25px;
+}
+
+.modal-checkbox input {
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 8px;
+  height: 15px;
+  width: 16px;
+}
+
+.modal-checkbox-field {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  transform: translate(-100%, 25%);
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--menu-color);
+  border-radius: 2px;
+}
+
+.modal-checkbox input:checked ~ .modal-checkbox-field {
+  background-color: var(--brand-color1);
+  border: 1px solid var(--brand-color1);
+}
+
+.modal-checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--brand-colorAccent);
+}
+
 .modal-form-btn {
   font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
   background-color: var(--brand-color1);
   color: var(--brand-colorAccent);
   border-radius: 4px;
   max-width: 200px;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 2;
   padding: 10px 41px;
   text-align: center;
   border: none;
   margin-top: 30px;
+  align-self: center;
 }
 
 .is-hidden {
